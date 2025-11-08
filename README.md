@@ -13,6 +13,16 @@ A WordPress plugin that adds a custom CSS textarea to every Gutenberg block, all
 - **Two CSS Modes**: Direct properties (like browser console) or custom selectors with `&` placeholder
 - **Secure**: Capability checks, CSS sanitization, and output escaping to prevent malicious code injection
 
+## Screenshots
+
+### Live Preview in Block Editor
+![Custom CSS panel in block editor with live preview](screenshots/screenshot-1.png)
+*The Custom CSS panel with tabbed interface (All, Mobile, Tablet, Desktop). CSS is applied in real-time as you type.*
+
+### Site Editor Support
+![Custom CSS in Site Editor with advanced selectors](screenshots/screenshot-2.png)
+*Works seamlessly in the Site Editor for template customization. Supports advanced selectors with `&` placeholder.*
+
 ## Installation
 
 ### From GitHub Releases (Recommended)
