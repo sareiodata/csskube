@@ -1,0 +1,82 @@
+/* CSSKube Editor Styles */
+
+.csskube-css-textarea {
+	font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+	font-size: 13px;
+}
+
+.csskube-css-textarea textarea {
+	font-family: inherit;
+	line-height: 1.6;
+}
+
+/* Tab styling */
+.csskube-tabs .components-tab-panel__tabs {
+	display: flex;
+	gap: 4px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 16px;
+}
+
+.csskube-tabs .components-tab-panel__tabs-item {
+	padding: 8px 12px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	transition: all 0.2s ease;
+}
+
+.csskube-tabs .components-tab-panel__tabs-item:hover {
+	background: #f0f0f0;
+}
+
+.csskube-tabs .components-tab-panel__tabs-item.is-active {
+	border-bottom-color: #2271b1;
+	color: #2271b1;
+	font-weight: 600;
+}
+
+.csskube-tab-title {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.csskube-tab-title .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+/* Visual indicator for tabs with CSS */
+.csskube-indicator {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #2271b1;
+	margin-left: 4px;
+	vertical-align: middle;
+}
+
+/* Highlight tabs that have CSS */
+.csskube-tabs .components-tab-panel__tabs-item .has-css {
+	position: relative;
+}
+
+/* Pulsing animation for the indicator */
+@keyframes csskube-pulse {
+	0%, 100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		transform: scale(1.2);
+	}
+}
+
+.csskube-tabs .components-tab-panel__tabs-item:not(.is-active) .csskube-indicator {
+	animation: csskube-pulse 2s ease-in-out infinite;
+}
