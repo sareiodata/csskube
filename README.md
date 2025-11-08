@@ -15,9 +15,33 @@ A WordPress plugin that adds a custom CSS textarea to every Gutenberg block, all
 
 ## Installation
 
-1. Ensure this plugin folder is in your WordPress `wp-content/plugins/` directory
-2. Activate the plugin from WordPress Admin → Plugins
-3. Start editing any post or page with the block editor
+### From GitHub Releases (Recommended)
+
+1. **Download the latest release:**
+   - Visit [Releases](../../releases/latest) page
+   - Download `csskube.zip`
+
+2. **Install in WordPress:**
+   - Go to WordPress Admin → Plugins → Add New → Upload Plugin
+   - Choose the downloaded `csskube.zip` file
+   - Click "Install Now" then "Activate"
+
+3. **Start using:**
+   - Edit any post or page with the block editor
+   - Select a block and look for "Custom CSS" in the block settings sidebar
+
+### Manual Installation
+
+1. Clone or download this repository
+2. Ensure the plugin folder is in your WordPress `wp-content/plugins/` directory
+3. Activate the plugin from WordPress Admin → Plugins
+4. Start editing any post or page with the block editor
+
+### WP-CLI Installation
+
+```bash
+wp plugin install https://github.com/sareiodata/csskube/releases/latest/download/csskube.zip --activate
+```
 
 ## Usage
 
@@ -249,6 +273,49 @@ GPL v2 or later
 ## Support
 
 For issues or feature requests, please contact Cozmoslabs.
+
+## For Developers
+
+### Automated Releases
+
+This plugin uses GitHub Actions to automatically create releases when you push a version tag.
+
+**How to create a new release:**
+
+1. **Commit your changes:**
+   ```bash
+   git add .
+   git commit -m "Your changes"
+   git push
+   ```
+
+2. **Create and push a version tag:**
+   ```bash
+   git tag -a v1.3.2 -m "Version 1.3.2 - Brief description"
+   git push origin v1.3.2
+   ```
+
+3. **GitHub automatically:**
+   - Creates a clean plugin zip (excludes `.md`, `.sh`, and config files)
+   - Creates a GitHub Release with release notes
+   - Uploads `csskube.zip` and `csskube-X.X.X.zip` as downloadable assets
+
+**Download URLs:**
+- Latest: `https://github.com/sareiodata/csskube/releases/latest/download/csskube.zip`
+- Specific: `https://github.com/sareiodata/csskube/releases/download/v1.3.1/csskube.zip`
+
+**What gets included in releases:**
+- `csskube.php` (main plugin file)
+- `js/block-css-control.js` (editor JavaScript)
+- `css/editor-styles.css` (editor styles)
+
+**What gets excluded:**
+- All `.md` files (README, CLAUDE, SECURITY, etc.)
+- `.sh` scripts (test-plugin.sh)
+- `.gitattributes` and `.gitignore`
+- `.github/` directory
+
+The exclusion list is defined in `.gitattributes`.
 
 ## Changelog
 
